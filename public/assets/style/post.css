@@ -1,0 +1,14 @@
+.container-title {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.container-title i:hover {
+    color: red;
+}
+
+.posts {
+    height: 100vh;
+    background-color: red;
+}

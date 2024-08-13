@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "files": [
+            "app/database/starter.php",
+            "app/database/post.php",
+            "app/database/user.php",
+            "app/views/head.php",
+            "app/functions.php"
+        ]
+    }
+}

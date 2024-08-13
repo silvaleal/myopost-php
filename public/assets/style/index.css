@@ -1,0 +1,21 @@
+.navbar-account li {
+    display: flex;
+}
+
+.navbar-menus {
+    display: flex;
+}
+
+.navbar-menus a {
+    color: rgb(156, 156, 156);
+}
+
+.navbar-menus a:hover {
+    color: rgb(0, 102, 255);
+}
+
+.posts {
+    text-align: left;
+    margin: 2em 10%;
+    font-size: 20px;
+}
