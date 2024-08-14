@@ -1,10 +1,15 @@
 <?php
 
-function registerPost($title, $desc, $shortdesc, $author_id) {
+function registerPost($title, $desc, $thumbnailID, $thumbnailEXTENSION, $author_id) {
     $connect = dbConnect();
-    $sql = "INSERT INTO postagens (post_title, post_desc, post_shortdesc, author_id) 
-            VALUES ('$title', '$desc', '$shortdesc', '$author_id')";
-    $connect->query($sql);   
+    if ($thumbnailID) { // Juro que tentei melhorar isso aqui kaksa (não usar else)
+        $sql = "INSERT INTO postagens (post_title, post_desc, thumbnail_id, thumbnail_extension, author_id) 
+            VALUES ('$title', '$desc', '$thumbnailID', '$thumbnailEXTENSION', '$author_id')";
+    } else {
+        $sql = "INSERT INTO postagens (post_title, post_desc, thumbnail_id, thumbnail_extension, author_id) 
+            VALUES ('$title', '$desc', NULL, NULL, '$author_id')";
+    }
+    $connect->query($sql);
 }
 
 function deletePostByID($id) {

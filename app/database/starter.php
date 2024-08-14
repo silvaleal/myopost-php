@@ -19,7 +19,11 @@ function dbLoad() {
             post_title VARCHAR(45), 
             post_desc TEXT, 
             post_shortdesc VARCHAR(25), 
-            author_id INT
+            thumbnail_id VARCHAR(25), 
+            thumbnail_extension VARCHAR(25), 
+            author_id INT,
+            post_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            post_likes INT NOT NULL DEFAULT 0
             );",
         "CREATE TABLE IF NOT EXISTS usuários (
             author_id INT PRIMARY KEY AUTO_INCREMENT,

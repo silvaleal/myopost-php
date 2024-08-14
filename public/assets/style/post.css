@@ -8,6 +8,10 @@
     color: red;
 }
 
+.container-title img {
+    width: 50px;
+}
+
 .posts {
     height: 100vh;
     background-color: red;

@@ -3,7 +3,7 @@
 <body>
     <div class="container">
         <h2 class="mt-5">Criar Postagem</h2>
-        <form action="scripts/new_post.php" method="post">
+        <form enctype="multipart/form-data" action="scripts/new_post.php" method="post">
             <div class="form-group">
                 <label for="title">Título</label>
                 <input type="text" class="form-control" name="title" placeholder="Digite o título da postagem">
@@ -11,6 +11,10 @@
             <div class="form-group">
                 <label for="content">Conteúdo</label>
                 <textarea class="form-control" name="content" rows="5" placeholder="Digite o conteúdo da postagem"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="">Thumbnail</label>
+                <p><input type="file" name="thumbnail"></p>
             </div>
             <button type="submit" class="btn btn-primary">Publicar</button>
         </form>
